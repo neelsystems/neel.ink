@@ -3,156 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>neel.ink - Welcome to my page!</title>
+    <title>Neel Systems Design</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f5f5f7;
-            color: #333;
+        /* Reset and Global Styles */
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
         }
         .container {
-            width: 90%;
-            max-width: 800px;
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
+        }
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px 0;
+        }
+        header h1 {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        header p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        /* Navigation */
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        nav ul li a:hover {
+            background-color: #555;
+        }
+        /* Main Sections */
+        .section {
+            margin-bottom: 40px;
+            padding: 40px;
             background-color: #fff;
             border: 1px solid #ccc;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        .window-bar {
-            background-color: #f0f0f0;
-            height: 30px;
-            width: 100%;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding-right: 10px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-        }
-        .window-title {
-            font-size: 14px;
-            color: #666;
-            margin: 0;
-            margin-right: auto;
-            font-weight: bold;
-        }
-        .window-controls {
-            display: flex;
-            width: 60px;
-            justify-content: space-between;
-            color: #666;
-        }
-        .window-controls button {
-            background-color: #f0f0f0;
-            border: none;
-            width: 12px;
-            height: 12px;
-            cursor: pointer;
-            font-size: 10px;
-            line-height: 12px;
-            color: #666;
-            text-align: center;
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-        }
-        .window-controls button:hover {
-            background-color: #ccc;
+        .section h2 {
+            font-size: 2rem;
             color: #333;
-        }
-        h1 {
-            font-size: 2.5rem;
             margin-bottom: 20px;
-            color: #333;
             text-transform: uppercase;
-            letter-spacing: 2px;
         }
-        h2 {
+        .section p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+        }
+        /* Services */
+        .services {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .service {
+            width: calc(33.33% - 20px);
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .service:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .service h3 {
             font-size: 1.5rem;
             color: #333;
             margin-bottom: 10px;
         }
-        .box {
-            background-color: #f0f0f0;
-            border: 1px solid #ccc;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            text-align: left;
-            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        .service p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            border: 1px solid #ccc;
-        }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 10px;
+        /* Contact */
+        .contact {
             text-align: center;
         }
-        footer {
-            margin-top: 20px;
-            font-size: 0.8rem;
+        .contact p {
+            font-size: 1.2rem;
             color: #666;
+            margin-bottom: 20px;
+        }
+        .contact a {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .contact a:hover {
+            background-color: #555;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px 0;
+            background-color: #333;
+            color: #fff;
+        }
+        footer p {
+            font-size: 1rem;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .services .service {
+                width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 576px) {
+            .services .service {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="window-bar">
-            <h3 class="window-title">neel.ink - Welcome to my page!</h3>
-            <div class="window-controls">
-                <button></button>
-                <button></button>
-                <button></button>
-            </div>
-        </div>
         <header>
-            <h1>Welcome to my page!</h1>
+            <h1>Neel Systems Design</h1>
+            <p>Your Partner in Digital Innovation</p>
         </header>
-        <main>
-            <div class="box">
-                <h2>About Me</h2>
-                <p>Hey there! I'm Austin Neel, a tech enthusiast with a passion for creativity and problem-solving. From coding to designing, I love diving into projects that challenge me and push the boundaries of what's possible.</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <section id="about" class="section">
+            <h2>About Us</h2>
+            <p>At Neel Systems Design, we specialize in crafting digital experiences that drive business growth and engage users. Our team is passionate about innovation and delivering solutions that exceed expectations.</p>
+        </section>
+        <section id="services" class="section">
+            <h2>Our Services</h2>
+            <div class="services">
+                <div class="service">
+                    <h3>Web Design</h3>
+                    <p>We create stunning websites that are user-friendly and visually appealing.</p>
+                </div>
+                <div class="service">
+                    <h3>Branding</h3>
+                    <p>We build strong brand identities that resonate with your audience.</p>
+                </div>
+                <div class="service">
+                    <h3>Digital Marketing</h3>
+                    <p>We develop strategies to boost your online presence and drive traffic.</p>
+                </div>
             </div>
-            <div class="box">
-                <h2>Passions</h2>
-                <p>When I'm not tinkering with computers, you can find me exploring the outdoors, capturing moments with my camera, or diving into a good book. I believe in living life to the fullest and embracing every opportunity to learn and grow.</p>
+        </section>
+        <section id="portfolio" class="section">
+            <h2>Portfolio</h2>
+            <p>Check out some of our recent projects.</p>
+            <!-- Replace with actual portfolio items -->
+            <div class="services">
+                <div class="service">
+                    <h3>Project 1</h3>
+                    <p>Description of Project 1.</p>
+                </div>
+                <div class="service">
+                    <h3>Project 2</h3>
+                    <p>Description of Project 2.</p>
+                </div>
+                <div class="service">
+                    <h3>Project 3</h3>
+                    <p>Description of Project 3.</p>
+                </div>
             </div>
-            <div class="box">
-                <h2>Skills</h2>
-                <table>
-                    <tr style="background-color: #f0f0f0;">
-                        <th>Web Design</th>
-                        <th>Advertising</th>
-                        <th>Branding</th>
-                        <th>Experience</th>
-                    </tr>
-                    <tr>
-                        <td>HTML, CSS, JavaScript</td>
-                        <td>Digital and Print Campaigns</td>
-                        <td>Logo Design, Visual Identity</td>
-                        <td>FTX, Crypto.com</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="box">
-                <h2>Get in Touch</h2>
-                <p>Want to collaborate on a project, share ideas, or just chat about technology and beyond? Feel free to reach out! Connect with me on LinkedIn, follow me on Twitter, or drop me an email. Let's make something awesome together!</p>
-            </div>
-        </main>
+        </section>
+        <section id="contact" class="section contact">
+            <h2>Contact Us</h2>
+            <p>Ready to start your next project with us? Reach out today!</p>
+            <a href="mailto:info@neelsystemsdesign.com">info@neelsystemsdesign.com</a>
+        </section>
         <footer>
-            <p>&copy; 2024 Austin Neel. All rights reserved.</p>
+            <p>&copy; 2024 Neel Systems Design. All rights reserved.</p>
         </footer>
     </div>
 </body>
