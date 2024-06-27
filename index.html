@@ -6,157 +6,104 @@
     <title>neel.ink - Welcome to my page!</title>
     <style>
         body {
-            font-family: 'Courier', monospace;
-            background-color: #000;
-            color: #00ff00;
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f7;
+            color: #333;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh; /* Ensure full viewport height */
+            min-height: 100vh;
         }
         .container {
-            width: 90%; /* Adjust width as needed */
+            width: 90%;
             max-width: 800px;
             padding: 20px;
-            background-color: #000;
-            border: 2px solid #00ff00;
+            background-color: #fff;
+            border: 1px solid #ccc;
             border-radius: 10px;
             text-align: center;
-            font-size: 16px;
-            line-height: 1.6;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         .window-bar {
-            background-color: #00ff00;
-            height: 28px;
+            background-color: #f0f0f0;
+            height: 30px;
             width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 100;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: flex-end;
             padding-right: 10px;
             box-sizing: border-box;
+            border: 1px solid #ccc;
         }
         .window-title {
-            font-size: 12px;
-            color: #000;
+            font-size: 14px;
+            color: #666;
             margin: 0;
             margin-right: auto;
-            font-family: 'Press Start 2P', cursive;
+            font-weight: bold;
         }
         .window-controls {
             display: flex;
             width: 60px;
             justify-content: space-between;
-            color: #000;
+            color: #666;
         }
         .window-controls button {
-            background-color: #000;
-            border: 1px solid #00ff00;
-            border-radius: 50%;
-            width: 14px;
-            height: 14px;
+            background-color: #f0f0f0;
+            border: none;
+            width: 12px;
+            height: 12px;
             cursor: pointer;
             font-size: 10px;
             line-height: 12px;
-            font-family: 'Press Start 2P', cursive;
-            color: #00ff00;
+            color: #666;
             text-align: center;
             transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
         }
         .window-controls button:hover {
-            background-color: #00ff00;
-            color: #000;
+            background-color: #ccc;
+            color: #333;
         }
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 20px;
-            color: #00ff00;
-            font-family: 'Press Start 2P', cursive;
+            color: #333;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            transition: color 0.3s ease-in-out;
-        }
-        h1:hover {
-            color: #ff0000; /* Nerdy change */
+            letter-spacing: 2px;
         }
         h2 {
             font-size: 1.5rem;
-            color: #00ff00;
+            color: #333;
             margin-bottom: 10px;
-            font-family: 'Press Start 2P', cursive;
-            transition: color 0.3s ease-in-out;
-        }
-        h2:hover {
-            color: #ff0000; /* Nerdy change */
         }
         .box {
-            background-color: #000;
-            border: 2px solid #00ff00;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 8px;
             text-align: left;
-            box-shadow: 0 0 10px rgba(0,0,0,0.3);
-            position: relative;
-            transition: box-shadow 0.3s ease-in-out;
-        }
-        .box:hover {
-            box-shadow: 0 0 15px rgba(0,255,0,0.7); /* Nerdy change */
-        }
-        .box::before {
-            content: "";
-            position: absolute;
-            top: -6px;
-            left: -6px;
-            right: -6px;
-            bottom: -6px;
-            border: 2px solid #00ff00;
-            border-radius: 10px;
-            z-index: -1;
-            transition: border-color 0.3s ease-in-out;
-        }
-        .box:hover::before {
-            border-color: #ff0000; /* Nerdy change */
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
         }
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
-            border: 2px solid #00ff00;
-            font-family: 'Courier', monospace;
+            border: 1px solid #ccc;
         }
         th, td {
-            border: 2px solid #00ff00;
+            border: 1px solid #ccc;
             padding: 10px;
             text-align: center;
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-        }
-        th {
-            background-color: #00ff00;
-            color: #000;
-        }
-        td {
-            background-color: #000;
-            color: #00ff00;
-        }
-        th:hover, td:hover {
-            background-color: #00ff00; /* Nerdy change */
-            color: #000; /* Nerdy change */
         }
         footer {
             margin-top: 20px;
             font-size: 0.8rem;
-            color: #00ff00;
-            font-family: 'Press Start 2P', cursive;
-            transition: color 0.3s ease-in-out;
-        }
-        footer:hover {
-            color: #ff0000; /* Nerdy change */
+            color: #666;
         }
     </style>
 </head>
@@ -185,7 +132,7 @@
             <div class="box">
                 <h2>Skills</h2>
                 <table>
-                    <tr>
+                    <tr style="background-color: #f0f0f0;">
                         <th>Web Design</th>
                         <th>Advertising</th>
                         <th>Branding</th>
@@ -208,6 +155,5 @@
             <p>&copy; 2024 Austin Neel. All rights reserved.</p>
         </footer>
     </div>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </body>
 </html>
