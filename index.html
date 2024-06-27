@@ -14,19 +14,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            overflow: hidden;
+            min-height: 100vh; /* Ensure full viewport height */
         }
         .container {
+            width: 90%; /* Adjust width as needed */
             max-width: 800px;
             padding: 20px;
             background-color: #000;
             border: 2px solid #00ff00;
             border-radius: 10px;
             text-align: center;
-            position: relative;
-            overflow-y: scroll; /* Enable vertical scrolling */
-            max-height: calc(100vh - 40px); /* Adjust max-height for scrolling */
             font-size: 16px;
             line-height: 1.6;
         }
