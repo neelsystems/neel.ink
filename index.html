@@ -3,40 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neel Systems Design</title>
+    <title>Austin Neel - Personal Page</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: 'Arial', sans-serif;
+            background-color: #008080;
+            color: #ffffff;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            overflow: hidden;
         }
         .container {
             max-width: 800px;
             padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            border-radius: 8px;
+            background-color: #008080;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            border: 2px solid #000;
+            border-radius: 10px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .window-bar {
+            background-color: #000;
+            height: 28px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+        .window-controls {
+            display: inline-block;
+            height: 100%;
+            margin-left: 10px;
+        }
+        .window-title {
+            display: inline-block;
+            line-height: 28px;
+            color: #fff;
+            margin: 0;
+            font-size: 12px;
         }
         h1 {
-            color: #333;
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 20px;
+            color: #fff;
         }
         h2 {
-            color: #555;
             font-size: 1.5rem;
+            color: #fff;
             margin-bottom: 10px;
         }
         .box {
-            background-color: #f0f0f0;
-            border: 1px solid #ccc;
+            background-color: #008080;
+            border: 2px solid #000;
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 8px;
@@ -45,31 +70,35 @@
         footer {
             margin-top: 20px;
             font-size: 0.8rem;
-            color: #777;
+            color: #fff;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="window-bar">
+            <div class="window-controls"></div>
+            <h3 class="window-title">Austin Neel - Personal Page</h3>
+        </div>
         <header>
-            <h1>Welcome to Neel Systems Design</h1>
+            <h1>Welcome to my Retro Space!</h1>
         </header>
         <main>
             <div class="box">
-                <h2>Innovative Solutions</h2>
-                <p>At Neel Systems Design, we innovate and design cutting-edge solutions to meet your business needs. Our team is dedicated to transforming ideas into practical, efficient, and scalable solutions that propel businesses forward.</p>
+                <h2>About Me</h2>
+                <p>Hey there! I'm Austin Neel, a tech enthusiast with a passion for creativity and problem-solving. From coding to designing, I love diving into projects that challenge me and push the boundaries of what's possible.</p>
             </div>
             <div class="box">
-                <h2>Passionate Team</h2>
-                <p>Our team is passionate about technology and committed to delivering excellence in every project. With a deep-rooted commitment to quality and customer satisfaction, we ensure that every solution we deliver exceeds expectations.</p>
+                <h2>Passions</h2>
+                <p>When I'm not tinkering with computers, you can find me exploring the outdoors, capturing moments with my camera, or diving into a good book. I believe in living life to the fullest and embracing every opportunity to learn and grow.</p>
             </div>
             <div class="box">
-                <h2>Empowering Businesses</h2>
-                <p>Explore our services and discover how we can empower your business with our expertise. Whether you're looking to streamline operations, enhance user experience, or integrate advanced functionalities, Neel Systems Design is here to help you succeed.</p>
+                <h2>Get in Touch</h2>
+                <p>Want to collaborate on a project, share ideas, or just chat about technology and beyond? Feel free to reach out! Connect with me on LinkedIn, follow me on Twitter, or drop me an email. Let's make something awesome together!</p>
             </div>
         </main>
         <footer>
-            <p>&copy; 2024 Neel Systems Design. All rights reserved.</p>
+            <p>&copy; 2024 Austin Neel. All rights reserved.</p>
         </footer>
     </div>
 </body>
