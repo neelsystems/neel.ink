@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>www.neel.ink</title>
+    <title>Austin Neel - Personal Page</title>
     <style>
         body {
             font-family: 'Courier', monospace;
@@ -68,18 +68,31 @@
             font-family: 'Press Start 2P', cursive;
             color: #00ff00;
             text-align: center;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+        .window-controls button:hover {
+            background-color: #00ff00;
+            color: #000;
         }
         h1 {
             font-size: 2rem;
             margin-bottom: 20px;
             color: #00ff00;
             font-family: 'Press Start 2P', cursive;
+            transition: color 0.3s ease-in-out;
+        }
+        h1:hover {
+            color: #ff0000; /* Nerdy change */
         }
         h2 {
             font-size: 1.5rem;
             color: #00ff00;
             margin-bottom: 10px;
             font-family: 'Press Start 2P', cursive;
+            transition: color 0.3s ease-in-out;
+        }
+        h2:hover {
+            color: #ff0000; /* Nerdy change */
         }
         .box {
             background-color: #000;
@@ -90,6 +103,10 @@
             text-align: left;
             box-shadow: 0 0 10px rgba(0,0,0,0.3);
             position: relative;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        .box:hover {
+            box-shadow: 0 0 15px rgba(0,255,0,0.7); /* Nerdy change */
         }
         .box::before {
             content: "";
@@ -101,19 +118,52 @@
             border: 2px solid #00ff00;
             border-radius: 10px;
             z-index: -1;
+            transition: border-color 0.3s ease-in-out;
+        }
+        .box:hover::before {
+            border-color: #ff0000; /* Nerdy change */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border: 2px solid #00ff00;
+            font-family: 'Courier', monospace;
+        }
+        th, td {
+            border: 2px solid #00ff00;
+            padding: 10px;
+            text-align: center;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+        th {
+            background-color: #00ff00;
+            color: #000;
+        }
+        td {
+            background-color: #000;
+            color: #00ff00;
+        }
+        th:hover, td:hover {
+            background-color: #00ff00; /* Nerdy change */
+            color: #000; /* Nerdy change */
         }
         footer {
             margin-top: 20px;
             font-size: 0.8rem;
             color: #00ff00;
             font-family: 'Press Start 2P', cursive;
+            transition: color 0.3s ease-in-out;
+        }
+        footer:hover {
+            color: #ff0000; /* Nerdy change */
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="window-bar">
-            <h3 class="window-title">neel.ink</h3>
+            <h3 class="window-title">Austin Neel - Personal Page</h3>
             <div class="window-controls">
                 <button></button>
                 <button></button>
@@ -121,16 +171,33 @@
             </div>
         </div>
         <header>
-            <h1>Welcome to my page!</h1>
+            <h1>Welcome to my Retro Space!</h1>
         </header>
         <main>
             <div class="box">
                 <h2>About Me</h2>
-                <p>Hey there! I'm Austin, a tech enthusiast with a passion for creativity and problem-solving. From coding to designing, I love diving into projects that challenge me and push the boundaries of what's possible.</p>
+                <p>Hey there! I'm Austin Neel, a tech enthusiast with a passion for creativity and problem-solving. From coding to designing, I love diving into projects that challenge me and push the boundaries of what's possible.</p>
             </div>
             <div class="box">
                 <h2>Passions</h2>
                 <p>When I'm not tinkering with computers, you can find me exploring the outdoors, capturing moments with my camera, or diving into a good book. I believe in living life to the fullest and embracing every opportunity to learn and grow.</p>
+            </div>
+            <div class="box">
+                <h2>Skills</h2>
+                <table>
+                    <tr>
+                        <th>Web Design</th>
+                        <th>Advertising</th>
+                        <th>Branding</th>
+                        <th>Experience</th>
+                    </tr>
+                    <tr>
+                        <td>HTML, CSS, JavaScript</td>
+                        <td>Digital and Print Campaigns</td>
+                        <td>Logo Design, Visual Identity</td>
+                        <td>FTX, Crypto.com</td>
+                    </tr>
+                </table>
             </div>
             <div class="box">
                 <h2>Get in Touch</h2>
