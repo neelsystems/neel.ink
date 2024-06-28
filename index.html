@@ -3,224 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neel Systems Design</title>
+    <title>neel.ink</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Reset and Global Styles */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
         body {
-            font-family: 'futura', sans-serif;
-            background-color: #f8f8f8;
-            color: #333;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        /* Header */
         header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding: 20px 0;
-        }
-        header h1 {
-            font-size: 3rem;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
             color: #333;
-            margin-bottom: 10px;
-            text-transform: uppercase;
+            background-color: #f8f9fa;
         }
-        header p {
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: url('your-background-image.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
+        .hero .cta {
+            display: inline-block;
+            padding: 10px 30px;
             font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 20px;
-        }
-        /* Navigation */
-        nav {
+            color: #fff;
             background-color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .hero .cta:hover {
+            background-color: #555;
+        }
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 10px 0;
             text-align: center;
         }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-        nav ul li a {
+        .nav a {
             color: #fff;
             text-decoration: none;
-            font-size: 1.2rem;
-            padding: 10px 20px;
-            transition: background-color 0.3s ease-in-out;
+            margin: 0 15px;
+            font-size: 1rem;
         }
-        nav ul li a:hover {
-            background-color: #555;
+        .geometric-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
         }
-        /* Main Sections */
-        .section {
-            margin-bottom: 40px;
-            padding: 40px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid rgba(255, 255, 255, 0.3);
+            position: absolute;
         }
-        .section h2 {
-            font-size: 2rem;
-            color: #333;
-            margin-bottom: 20px;
-            text-transform: uppercase;
+        .triangle:nth-child(1) {
+            top: 20%;
+            left: 10%;
         }
-        .section p {
-            font-size: 1.1rem;
-            color: #666;
-            line-height: 1.8;
+        .triangle:nth-child(2) {
+            top: 40%;
+            left: 70%;
+            transform: rotate(180deg);
         }
-        /* Services */
-        .services {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 255, 255, 0.3);
+            position: absolute;
         }
-        .service {
-            width: calc(33.33% - 20px);
-            margin-bottom: 20px;
+        .square:nth-child(3) {
+            top: 60%;
+            left: 30%;
+        }
+        .square:nth-child(4) {
+            top: 80%;
+            left: 80%;
+        }
+        .footer {
+            text-align: center;
             padding: 20px;
-            background-color: #f0f0f0;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            text-align: center;
-            transition: transform 0.3s ease-in-out;
-        }
-        .service:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .service h3 {
-            font-size: 1.5rem;
-            color: #333;
-            margin-bottom: 10px;
-        }
-        .service p {
-            font-size: 1rem;
-            color: #666;
-            line-height: 1.6;
-        }
-        /* Contact */
-        .contact {
-            text-align: center;
-        }
-        .contact p {
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 20px;
-        }
-        .contact a {
-            display: inline-block;
             background-color: #333;
+            color: #fff;
+        }
+        .footer a {
             color: #fff;
             text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease-in-out;
-        }
-        .contact a:hover {
-            background-color: #555;
-        }
-        /* Footer */
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px 0;
-            background-color: #333;
-            color: #fff;
-        }
-        footer p {
-            font-size: 1rem;
-        }
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .services .service {
-                width: calc(50% - 20px);
-            }
-        }
-        @media (max-width: 576px) {
-            .services .service {
-                width: 100%;
-            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Neel Systems Design</h1>
-            <p>Your Partner in Digital Innovation</p>
-        </header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <section id="about" class="section">
-            <h2>About Us</h2>
-            <p>At Neel Systems Design, we specialize in crafting digital experiences that drive business growth and engage users. Our team is passionate about innovation and delivering solutions that exceed expectations.</p>
-        </section>
-        <section id="services" class="section">
-            <h2>Our Services</h2>
-            <div class="services">
-                <div class="service">
-                    <h3>Web Design</h3>
-                    <p>We create stunning websites that are user-friendly and visually appealing.</p>
-                </div>
-                <div class="service">
-                    <h3>Branding</h3>
-                    <p>We build strong brand identities that resonate with your audience.</p>
-                </div>
-                <div class="service">
-                    <h3>Digital Marketing</h3>
-                    <p>We develop strategies to boost your online presence and drive traffic.</p>
-                </div>
-            </div>
-        </section>
-        <section id="portfolio" class="section">
-            <h2>Portfolio</h2>
-            <p>Check out some of our recent projects.</p>
-            <!-- Replace with actual portfolio items -->
-            <div class="services">
-                <div class="service">
-                    <h3>Project 1</h3>
-                    <p>Description of Project 1.</p>
-                </div>
-                <div class="service">
-                    <h3>Project 2</h3>
-                    <p>Description of Project 2.</p>
-                </div>
-                <div class="service">
-                    <h3>Project 3</h3>
-                    <p>Description of Project 3.</p>
-                </div>
-            </div>
-        </section>
-        <section id="contact" class="section contact">
-            <h2>Contact Us</h2>
-            <p>Ready to start your next project with us? Reach out today!</p>
-            <a href="mailto:info@neelsystemsdesign.com">info@neelsystemsdesign.com</a>
-        </section>
-        <footer>
-            <p>&copy; 2024 Neel Systems Design. All rights reserved.</p>
-        </footer>
-    </div>
+    <header class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </header>
+    <section class="hero" id="home">
+        <div>
+            <h1>Welcome to neel.ink</h1>
+            <p>Crafting Stunning Digital Experiences</p>
+            <a href="#contact" class="cta">Get Started</a>
+        </div>
+        <div class="geometric-shapes">
+            <div class="triangle"></div>
+            <div class="triangle"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>&copy; 2024 neel.ink. All rights reserved.</p>
+        <p><a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+    </footer>
 </body>
 </html>
