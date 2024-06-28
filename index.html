@@ -8,11 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-        header {
             margin: 0;
             font-family: 'Roboto', sans-serif;
             color: #333;
             background-color: #f8f9fa;
+            overflow: hidden;
         }
         .hero {
             position: relative;
@@ -68,13 +68,17 @@
             height: 100%;
             z-index: -1;
         }
+        .triangle, .square {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.3);
+            transition: transform 0.2s ease-out;
+        }
         .triangle {
             width: 0;
             height: 0;
             border-left: 50px solid transparent;
             border-right: 50px solid transparent;
             border-bottom: 100px solid rgba(255, 255, 255, 0.3);
-            position: absolute;
         }
         .triangle:nth-child(1) {
             top: 20%;
@@ -88,8 +92,6 @@
         .square {
             width: 100px;
             height: 100px;
-            background-color: rgba(255, 255, 255, 0.3);
-            position: absolute;
         }
         .square:nth-child(3) {
             top: 60%;
@@ -124,7 +126,7 @@
             <p>Crafting Stunning Digital Experiences</p>
             <a href="#contact" class="cta">Get Started</a>
         </div>
-        <div class="geometric-shapes">
+        <div class="geometric-shapes" id="geometric-shapes">
             <div class="triangle"></div>
             <div class="triangle"></div>
             <div class="square"></div>
@@ -135,5 +137,17 @@
         <p>&copy; 2024 neel.ink. All rights reserved.</p>
         <p><a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
     </footer>
+
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            const shapes = document.querySelectorAll('.geometric-shapes > div');
+            shapes.forEach(shape => {
+                const speed = shape.dataset.speed || 20;
+                const x = (window.innerWidth - e.pageX*speed) / 100;
+                const y = (window.innerHeight - e.pageY*speed) / 100;
+                shape.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        });
+    </script>
 </body>
 </html>
