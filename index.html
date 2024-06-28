@@ -7,171 +7,79 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            color: #333;
-            background-color: #1c1c1c;
-            overflow-x: hidden;
-        }
-        .hero {
-            position: relative;
-            height: 100vh;
-            background: linear-gradient(135deg, #4a90e2 30%, #9013fe 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            text-align: center;
-            animation: fadeIn 2s ease-out;
-            border-radius: 20px;
-            border: 2px solid #d2b48c;
-            margin: 10px;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 4rem;
-            margin: 0;
-            position: relative;
-            left: -20px;
-            animation: slideIn 1.5s ease-out;
-        }
-        @keyframes slideIn {
-            from { left: -100px; opacity: 0; }
-            to { left: -20px; opacity: 1; }
-        }
-        .hero p {
-            font-size: 1.5rem;
-            margin: 20px 0;
-        }
-        .hero .cta {
-            display: inline-block;
-            padding: 10px 30px;
-            font-size: 1.2rem;
-            color: #fff;
-            background-color: #333;
-            text-decoration: none;
-            border-radius: 5px;
-            border: 2px solid #6b8e23;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-        .hero .cta:hover {
-            background-color: #555;
-            transform: scale(1.05);
+            margin: 0; font-family: 'Roboto', sans-serif; color: #333; background-color: #1c1c1c; overflow-x: hidden;
         }
         .nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            padding: 10px 0;
-            text-align: center;
-            z-index: 1000;
-            border-bottom: 2px solid #6b8e23;
+            position: fixed; top: 0; width: 100%; background-color: rgba(0, 0, 0, 0.9); padding: 10px 0; text-align: center; z-index: 1000; border-bottom: 2px solid #6b8e23;
         }
         .nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1rem;
-            transition: color 0.3s;
+            color: #fff; text-decoration: none; margin: 0 15px; font-size: 1rem; transition: color 0.3s;
         }
         .nav a:hover {
             color: #d2b48c;
         }
+        .hero {
+            position: relative; height: 100vh; background: linear-gradient(135deg, #6b8e23 30%, #d2b48c 100%); display: flex; align-items: center; justify-content: center; color: #fff; text-align: center; animation: fadeIn 2s ease-out; border-radius: 20px; border: 2px solid #d2b48c; margin: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; } to { opacity: 1; }
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif; font-size: 4rem; margin: 0; position: relative; left: -20px; animation: slideIn 1.5s ease-out;
+        }
+        @keyframes slideIn {
+            from { left: -100px; opacity: 0; } to { left: -20px; opacity: 1; }
+        }
+        .hero p {
+            font-size: 1.5rem; margin: 20px 0;
+        }
+        .hero .cta {
+            display: inline-block; padding: 10px 30px; font-size: 1.2rem; color: #fff; background-color: #333; text-decoration: none; border-radius: 5px; border: 2px solid #6b8e23; transition: background-color 0.3s, transform 0.3s;
+        }
+        .hero .cta:hover {
+            background-color: #555; transform: scale(1.05);
+        }
         .strip {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 50vh;
-            color: #fff;
-            padding: 0 20px;
-            border-radius: 20px;
-            border: 2px solid #d2b48c;
-            margin: 10px;
+            display: flex; justify-content: center; align-items: center; height: 50vh; color: #fff; padding: 0 20px; border-radius: 20px; border: 2px solid #d2b48c; margin: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
         }
         .strip:nth-child(even) {
-            background-color: #4a90e2;
+            background-color: #6b8e23;
         }
         .strip:nth-child(odd) {
-            background-color: #9013fe;
+            background-color: #d2b48c;
         }
         .strip-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-            animation: fadeIn 2s ease-out;
+            display: flex; flex-direction: column; align-items: center; text-align: center; padding: 20px; animation: fadeIn 2s ease-out;
         }
         .strip-content h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            margin: 0;
-            animation: slideIn 1.5s ease-out;
+            font-family: 'Playfair Display', serif; font-size: 2.5rem; margin: 0; animation: slideIn 1.5s ease-out;
         }
         .strip-content p {
-            font-size: 1.2rem;
-            margin: 10px 0;
+            font-size: 1.2rem; margin: 10px 0;
         }
         .strip-alternate {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
+            display: flex; flex-wrap: wrap; justify-content: center; padding: 20px;
         }
         .strip-alternate div {
-            flex: 1;
-            min-width: 300px;
-            margin: 10px;
-            padding: 20px;
-            color: #fff;
-            border-radius: 20px;
-            border: 2px solid #1c1c1c;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s, box-shadow 0.3s;
+            flex: 1; min-width: 300px; margin: 10px; padding: 20px; color: #fff; border-radius: 20px; border: 2px solid #1c1c1c; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); transition: transform 0.3s, box-shadow 0.3s;
         }
         .strip-alternate div:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            transform: translateY(-10px); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
         }
         .strip-alternate div:nth-child(odd) {
-            background-color: #4a90e2;
+            background-color: #6b8e23;
         }
         .strip-alternate div:nth-child(even) {
-            background-color: #9013fe;
+            background-color: #d2b48c;
         }
         .footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: #fff;
+            text-align: center; padding: 20px; background-color: #333; color: #fff;
         }
         .footer a {
-            color: #fff;
-            text-decoration: none;
+            color: #fff; text-decoration: none;
         }
         .footer a:hover {
             text-decoration: underline;
-        }
-        /* Additional modern and futuristic styling */
-        .strip-content, .strip-alternate div {
-            background: rgba(0, 0, 0, 0.5);
-        }
-        .strip-content h2, .strip-alternate div h2 {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-        }
-        .strip-content p, .strip-alternate div p {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 400;
-            line-height: 1.6;
         }
     </style>
 </head>
@@ -189,14 +97,12 @@
             <a href="#contact" class="cta">Get Started</a>
         </div>
     </section>
-
     <section class="strip">
         <div class="strip-content">
             <h2>About Us</h2>
             <p>neel.ink is dedicated to creating exceptional digital experiences. Our journey started with a passion for innovation and a commitment to excellence. We specialize in bringing your vision to life with cutting-edge technology and creative solutions.</p>
         </div>
     </section>
-
     <section class="strip-alternate">
         <div>
             <h2>Web Design</h2>
@@ -207,14 +113,12 @@
             <p>Boost your online presence with our expert SEO optimization. We use the latest techniques to increase your site's visibility, drive more traffic, and improve your search engine rankings.</p>
         </div>
     </section>
-
     <section class="strip">
         <div class="strip-content">
             <h2>Our Expertise</h2>
             <p>With years of experience in the industry, our team has the skills and knowledge to deliver top-notch digital solutions tailored to your needs. From web development to digital marketing, we cover all aspects of your online presence.</p>
         </div>
     </section>
-
     <section class="strip-alternate">
         <div>
             <h2>Branding</h2>
@@ -225,13 +129,15 @@
             <p>Our marketing strategies are designed to grow your business. From social media campaigns to email marketing, we cover all aspects of digital marketing to drive engagement and conversions.</p>
         </div>
     </section>
-
     <section class="strip">
         <div class="strip-content">
             <h2>Contact Us</h2>
             <p>Ready to take your digital presence to the next level? Get in touch with us today and let's start creating something amazing together. We look forward to collaborating with you to achieve your business goals.</p>
         </div>
     </section>
-
     <footer class="footer">
-        <p>&copy; 2024 neel.ink. All rights reserved.</p
+        <p>&copy; 2024 neel.ink. All rights reserved.</p>
+        <p><a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
