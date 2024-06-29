@@ -3,37 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neel.Ink</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&family=Tiny5&display=swap" rel="stylesheet">
+    <title>neel.ink</title>
+    <style>
+        body {
+            background-color: #87CEEB;
+            font-family: 'Press Start 2P', cursive;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            border: 8px solid #333;
+            border-radius: 8px;
+            max-width: 800px;
+        }
+        .pixel-art {
+            width: 100px;
+            height: 100px;
+            background-image: url('https://via.placeholder.com/100'); /* Replace with your pixel art image URL */
+            margin: 0 auto 20px auto;
+        }
+        h1 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        h2 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        p {
+            font-size: 14px;
+            margin: 10px 0;
+            text-align: left;
+        }
+        .button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .button:hover {
+            background-color: #555;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #fff;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Neel.Ink</h1>
-        <p>Where Creativity Meets Innovation</p>
-    </header>
-    <main>
-        <section class="intro">
-            <h2>About Us</h2>
-            <p>At Neel.Ink, we blend technology and art to deliver innovative design solutions for your business needs.</p>
-        </section>
-        <section class="services">
-            <h2>Our Services</h2>
+    <div class="container">
+        <div class="pixel-art"></div>
+        <h1>Welcome to neel.ink</h1>
+        <h2>About Me</h2>
+        <p>
+            Hello! I'm Austin Neel, a web developer with a passion for creating unique and engaging digital experiences. With a background in systems design, marketing, and client success, I bring a diverse skill set to every project. My journey in the tech world has been fueled by a love for innovation and a drive to push the boundaries of what's possible online.
+        </p>
+        <h2>My Expertise</h2>
+        <p>
+            Over the years, I've honed my skills in various areas:
             <ul>
-                <li>Web Development</li>
-                <li>Graphic Design</li>
-                <li>UI/UX Design</li>
-                <li>Digital Marketing</li>
+                <li>Web Development: Crafting responsive and visually appealing websites.</li>
+                <li>Systems Design: Enhancing efficiency and scalability through innovative designs.</li>
+                <li>Marketing: Developing strategies that drive engagement and growth.</li>
+                <li>Client Relations: Building strong relationships and ensuring client satisfaction.</li>
             </ul>
-        </section>
-        <section class="contact">
-            <h2>Contact Us</h2>
-            <p>Let's create something amazing together. Reach out to us today!</p>
-            <a href="mailto:info@neel.ink">Email Us</a>
-        </section>
-    </main>
+        </p>
+        <h2>Projects</h2>
+        <p>
+            Here are a few highlights from my portfolio:
+            <ul>
+                <li><strong>Squeegee Bros:</strong> Enhanced scheduling and client relations for a window cleaning business.</li>
+                <li><strong>Uncle Kim's Coatings:</strong> Developed a dynamic website for a concrete company.</li>
+                <li><strong>IB Printing:</strong> Created an engaging online presence for a printing service.</li>
+                <li><strong>Deb's Cookie Jar:</strong> Designed a delightful website for a local bakery.</li>
+            </ul>
+        </p>
+        <h2>Let's Connect</h2>
+        <p>
+            I'm always excited to collaborate on new projects and bring innovative ideas to life. Feel free to check out my work on GitHub or get in touch with me for any inquiries or opportunities.
+        </p>
+        <a href="https://github.com/username" class="button">Visit My GitHub</a>
+    </div>
     <footer>
-        <p>&copy; 2024 Neel.Ink. All rights reserved.</p>
+        © 2024 Austin Neel. All rights reserved.
     </footer>
 </body>
 </html>
