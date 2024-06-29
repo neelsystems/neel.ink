@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>neel.ink</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=VT323&display=swap');
+        
         body {
-            background-color: #f4f4f9;
-            font-family: Arial, sans-serif;
+            background-color: #ffefd5;
+            font-family: 'Roboto', sans-serif;
             color: #333;
             margin: 0;
             padding: 0;
@@ -20,41 +22,65 @@
         }
         header {
             width: 100%;
-            background-color: #333;
+            background-color: #ff6347;
             color: #fff;
-            padding: 10px 0;
+            padding: 20px 0;
             text-align: center;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            font-family: 'VT323', monospace;
         }
         header h1 {
             margin: 0;
-            font-size: 24px;
+            font-size: 36px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
         .container {
             background-color: #fff;
-            padding: 20px;
+            padding: 40px 20px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
             border-radius: 8px;
             max-width: 800px;
             width: 90%;
             box-sizing: border-box;
-            margin: 20px;
+            margin: 100px 20px 20px 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
         .pixel-art {
-            width: 100px;
-            height: 100px;
-            background-image: url('https://via.placeholder.com/100'); /* Replace with your pixel art image URL */
+            width: 120px;
+            height: 120px;
+            background-image: url('https://via.placeholder.com/120'); /* Replace with your pixel art image URL */
             margin: 0 auto 20px auto;
+            border-radius: 50%;
+            border: 4px solid #ff6347;
+            animation: spin 5s linear infinite;
+        }
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
         }
         h2 {
-            font-size: 20px;
+            font-size: 26px;
             margin: 20px 0;
+            color: #ff6347;
         }
         p {
             font-size: 16px;
             margin: 10px 0;
             text-align: left;
+            line-height: 1.6;
         }
         ul {
             text-align: left;
@@ -64,28 +90,31 @@
             margin-bottom: 10px;
         }
         .button {
-            background-color: #333;
+            background-color: #ff6347;
             color: #fff;
-            padding: 10px 20px;
+            padding: 12px 24px;
             text-decoration: none;
             display: inline-block;
             margin-top: 20px;
             border-radius: 4px;
             font-size: 16px;
+            transition: background-color 0.3s ease;
+            font-family: 'VT323', monospace;
         }
         .button:hover {
-            background-color: #555;
+            background-color: #ff4500;
         }
         footer {
             margin-top: 20px;
             font-size: 14px;
             color: #666;
+            font-family: 'VT323', monospace;
         }
         @media (max-width: 600px) {
             h2 {
-                font-size: 18px;
+                font-size: 22px;
             }
-            p, th, td {
+            p {
                 font-size: 14px;
             }
             .button {
