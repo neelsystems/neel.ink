@@ -16,6 +16,19 @@
             align-items: center;
             min-height: 100vh;
             box-sizing: border-box;
+            flex-direction: column;
+        }
+        header {
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
         }
         .container {
             background-color: #fff;
@@ -34,12 +47,8 @@
             background-image: url('https://via.placeholder.com/100'); /* Replace with your pixel art image URL */
             margin: 0 auto 20px auto;
         }
-        h1 {
-            font-size: 28px;
-            margin: 20px 0;
-        }
         h2 {
-            font-size: 24px;
+            font-size: 20px;
             margin: 20px 0;
         }
         p {
@@ -72,26 +81,9 @@
             font-size: 14px;
             color: #666;
         }
-        table {
-            width: 100%;
-            margin: 20px 0;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-            font-size: 14px;
-        }
-        th {
-            background-color: #f4f4f9;
-        }
         @media (max-width: 600px) {
-            h1 {
-                font-size: 24px;
-            }
             h2 {
-                font-size: 20px;
+                font-size: 18px;
             }
             p, th, td {
                 font-size: 14px;
@@ -103,9 +95,11 @@
     </style>
 </head>
 <body>
+    <header>
+        <h1>neel.ink</h1>
+    </header>
     <div class="container">
         <div class="pixel-art"></div>
-        <h1>Welcome to neel.ink</h1>
         <h2>About Me</h2>
         <p>
             Hello! I'm Austin Neel, a web developer with a passion for creating unique and engaging digital experiences. With a background in systems design, marketing, and client success, I bring a diverse skill set to every project. My journey in the tech world has been fueled by a love for innovation and a drive to push the boundaries of what's possible online.
@@ -129,60 +123,27 @@
             <li><strong>Deb's Cookie Jar:</strong> Designed a delightful website for a local bakery.</li>
         </ul>
         <h2>Experience</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Position</th>
-                    <th>Company</th>
-                    <th>Duration</th>
-                    <th>Details</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Senior Systems Design Engineer</td>
-                    <td>Squeegee Bros</td>
-                    <td>Oct 2023 - Present</td>
-                    <td>Responsible for system designs that enhance efficiency and scalability. Key contributions include innovating system designs, leading IT integration, conducting system testing, and mentoring junior engineers.</td>
-                </tr>
-                <tr>
-                    <td>Vice President Of Marketing And Client Success</td>
-                    <td>Concrete Coating Acquisitions</td>
-                    <td>Feb 2024 - Apr 2024</td>
-                    <td>Focused on client satisfaction and marketing strategies in the concrete coatings industry.</td>
-                </tr>
-                <tr>
-                    <td>Web Developer</td>
-                    <td>Freelance</td>
-                    <td>Feb 2019 - Mar 2024</td>
-                    <td>Helping individuals and businesses with digital solutions.</td>
-                </tr>
-                <tr>
-                    <td>Door to Door Salesperson</td>
-                    <td>Moxie Pest Control</td>
-                    <td>Mar 2023 - Aug 2023</td>
-                    <td>Developed persuasive skills, built customer relationships, and achieved sales targets.</td>
-                </tr>
-                <tr>
-                    <td>Frontend Developer</td>
-                    <td>Crypto.com</td>
-                    <td>Feb 2021 - Dec 2022</td>
-                    <td>Contributed to Web3 development, particularly in NFT projects.</td>
-                </tr>
-                <tr>
-                    <td>Barista</td>
-                    <td>Farmhouse Corner Market</td>
-                    <td>Jul 2019 - Apr 2020</td>
-                    <td>Gained experience in customer service and teamwork.</td>
-                </tr>
-                <tr>
-                    <td>Equestrian Trainer Assistant</td>
-                    <td>Ferdinand's Horse Rescue and Boarding Facility</td>
-                    <td>Feb 2018 - Jan 2020</td>
-                    <td>Provided daily care for horses and assisted with training activities.</td>
-                </tr>
-            </tbody>
-        </table>
+        <p>
+            <strong>Senior Systems Design Engineer at Squeegee Bros (Oct 2023 - Present):</strong> Responsible for system designs that enhance efficiency and scalability. Key contributions include innovating system designs, leading IT integration, conducting system testing, and mentoring junior engineers.
+        </p>
+        <p>
+            <strong>Vice President Of Marketing And Client Success at Concrete Coating Acquisitions (Feb 2024 - Apr 2024):</strong> Focused on client satisfaction and marketing strategies in the concrete coatings industry.
+        </p>
+        <p>
+            <strong>Web Developer (Feb 2019 - Mar 2024):</strong> Freelance experience in web development, helping individuals and businesses with digital solutions.
+        </p>
+        <p>
+            <strong>Door to Door Salesperson at Moxie Pest Control (Mar 2023 - Aug 2023):</strong> Developed persuasive skills, built customer relationships, and achieved sales targets.
+        </p>
+        <p>
+            <strong>Frontend Developer at Crypto.com (Feb 2021 - Dec 2022):</strong> Contributed to Web3 development, particularly in NFT projects.
+        </p>
+        <p>
+            <strong>Barista at Farmhouse Corner Market (Jul 2019 - Apr 2020):</strong> Gained experience in customer service and teamwork.
+        </p>
+        <p>
+            <strong>Equestrian Trainer Assistant at Ferdinand's Horse Rescue and Boarding Facility (Feb 2018 - Jan 2020):</strong> Provided daily care for horses and assisted with training activities.
+        </p>
         <h2>Let's Connect</h2>
         <p>
             I'm always excited to collaborate on new projects and bring innovative ideas to life. Feel free to check out my work on GitHub or get in touch with me for any inquiries or opportunities.
