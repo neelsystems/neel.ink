@@ -14,7 +14,8 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
         }
         .container {
             background-color: #fff;
@@ -24,6 +25,8 @@
             border: 8px solid #333;
             border-radius: 8px;
             max-width: 800px;
+            width: 100%;
+            box-sizing: border-box;
         }
         .pixel-art {
             width: 100px;
@@ -33,11 +36,11 @@
         }
         h1 {
             font-size: 24px;
-            margin: 10px 0;
+            margin: 20px 0;
         }
         h2 {
             font-size: 20px;
-            margin: 10px 0;
+            margin: 20px 0;
         }
         p {
             font-size: 14px;
@@ -62,6 +65,42 @@
             font-size: 12px;
             color: #fff;
         }
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: left;
+            font-size: 12px;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 10px;
+            }
+            .button {
+                padding: 8px 16px;
+                font-size: 12px;
+            }
+            h1, h2 {
+                font-size: 18px;
+            }
+            p {
+                font-size: 12px;
+            }
+            th, td {
+                padding: 5px;
+                font-size: 10px;
+            }
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
@@ -76,23 +115,76 @@
         <h2>My Expertise</h2>
         <p>
             Over the years, I've honed my skills in various areas:
-            <ul>
-                <li>Web Development: Crafting responsive and visually appealing websites.</li>
-                <li>Systems Design: Enhancing efficiency and scalability through innovative designs.</li>
-                <li>Marketing: Developing strategies that drive engagement and growth.</li>
-                <li>Client Relations: Building strong relationships and ensuring client satisfaction.</li>
-            </ul>
         </p>
+        <ul>
+            <li>Web Development: Crafting responsive and visually appealing websites.</li>
+            <li>Systems Design: Enhancing efficiency and scalability through innovative designs.</li>
+            <li>Marketing: Developing strategies that drive engagement and growth.</li>
+            <li>Client Relations: Building strong relationships and ensuring client satisfaction.</li>
+        </ul>
         <h2>Projects</h2>
-        <p>
-            Here are a few highlights from my portfolio:
-            <ul>
-                <li><strong>Squeegee Bros:</strong> Enhanced scheduling and client relations for a window cleaning business.</li>
-                <li><strong>Uncle Kim's Coatings:</strong> Developed a dynamic website for a concrete company.</li>
-                <li><strong>IB Printing:</strong> Created an engaging online presence for a printing service.</li>
-                <li><strong>Deb's Cookie Jar:</strong> Designed a delightful website for a local bakery.</li>
-            </ul>
-        </p>
+        <p>Here are a few highlights from my portfolio:</p>
+        <ul>
+            <li><strong>Squeegee Bros:</strong> Enhanced scheduling and client relations for a window cleaning business.</li>
+            <li><strong>Uncle Kim's Coatings:</strong> Developed a dynamic website for a concrete company.</li>
+            <li><strong>IB Printing:</strong> Created an engaging online presence for a printing service.</li>
+            <li><strong>Deb's Cookie Jar:</strong> Designed a delightful website for a local bakery.</li>
+        </ul>
+        <h2>Experience</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Company</th>
+                    <th>Duration</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Senior Systems Design Engineer</td>
+                    <td>Squeegee Bros</td>
+                    <td>Oct 2023 - Present</td>
+                    <td>Responsible for system designs that enhance efficiency and scalability. Key contributions include innovating system designs, leading IT integration, conducting system testing, and mentoring junior engineers.</td>
+                </tr>
+                <tr>
+                    <td>Vice President Of Marketing And Client Success</td>
+                    <td>Concrete Coating Acquisitions</td>
+                    <td>Feb 2024 - Apr 2024</td>
+                    <td>Focused on client satisfaction and marketing strategies in the concrete coatings industry.</td>
+                </tr>
+                <tr>
+                    <td>Web Developer</td>
+                    <td>Freelance</td>
+                    <td>Feb 2019 - Mar 2024</td>
+                    <td>Helping individuals and businesses with digital solutions.</td>
+                </tr>
+                <tr>
+                    <td>Door to Door Salesperson</td>
+                    <td>Moxie Pest Control</td>
+                    <td>Mar 2023 - Aug 2023</td>
+                    <td>Developed persuasive skills, built customer relationships, and achieved sales targets.</td>
+                </tr>
+                <tr>
+                    <td>Frontend Developer</td>
+                    <td>Crypto.com</td>
+                    <td>Feb 2021 - Dec 2022</td>
+                    <td>Contributed to Web3 development, particularly in NFT projects.</td>
+                </tr>
+                <tr>
+                    <td>Barista</td>
+                    <td>Farmhouse Corner Market</td>
+                    <td>Jul 2019 - Apr 2020</td>
+                    <td>Gained experience in customer service and teamwork.</td>
+                </tr>
+                <tr>
+                    <td>Equestrian Trainer Assistant</td>
+                    <td>Ferdinand's Horse Rescue and Boarding Facility</td>
+                    <td>Feb 2018 - Jan 2020</td>
+                    <td>Provided daily care for horses and assisted with training activities.</td>
+                </tr>
+            </tbody>
+        </table>
         <h2>Let's Connect</h2>
         <p>
             I'm always excited to collaborate on new projects and bring innovative ideas to life. Feel free to check out my work on GitHub or get in touch with me for any inquiries or opportunities.
