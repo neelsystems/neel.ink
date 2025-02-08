@@ -3,101 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>neel.ink</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Austin's Portfolio</title>
     <style>
-        /* General Styling */
         body {
-            background-color: #0d1117;
-            font-family: 'Press Start 2P', cursive;
-            color: #c9d1d9;
+            font-family: 'Courier New', monospace;
+            background-color: #121212;
+            color: #ffffff;
             margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1e1e1e;
             padding: 20px;
             text-align: center;
+            font-size: 24px;
+            font-weight: bold;
         }
-
-        h1 {
-            color: #58a6ff;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background: #222;
         }
-
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
         .container {
-            max-width: 90%;
+            width: 80%;
             margin: auto;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background: rgba(20, 20, 20, 0.9);
-            border-radius: 10px;
-            overflow: hidden;
+        .timeline {
+            border-left: 2px solid #fff;
+            padding-left: 20px;
         }
-
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #30363d;
+        .timeline-item {
+            margin-bottom: 20px;
         }
-
-        th {
-            background: #161b22;
-            color: #58a6ff;
-        }
-
-        tr:hover {
-            background: rgba(88, 166, 255, 0.2);
-        }
-
-        @media (max-width: 600px) {
-            body {
-                padding: 10px;
-            }
-            table {
-                font-size: 12px;
-            }
-            th, td {
-                padding: 8px;
-            }
+        .footer {
+            background: #1e1e1e;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
+    <header>Austin's Portfolio</header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
     <div class="container">
-        <h1>Experience & Projects</h1>
-        <table>
-            <tr>
-                <th>Project</th>
-                <th>Role</th>
-                <th>Details</th>
-            </tr>
-            <tr>
-                <td>Trimlight Raleigh</td>
-                <td>Advertising & Sales</td>
-                <td>Managed high-ticket Facebook ad campaigns.</td>
-            </tr>
-            <tr>
-                <td>Anova</td>
-                <td>Marketing & Strategy</td>
-                <td>Developed and executed digital marketing strategies.</td>
-            </tr>
-            <tr>
-                <td>Egolf Interiors</td>
-                <td>Branding & Web Design</td>
-                <td>Created branding assets and a modern website.</td>
-            </tr>
-            <tr>
-                <td>Canvas 35</td>
-                <td>Creative Director</td>
-                <td>Led creative initiatives and digital experiences.</td>
-            </tr>
-        </table>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Creative entrepreneur with expertise in web design, branding, digital advertising, and business development.</p>
+        </section>
+        <section id="experience">
+            <h2>Experience Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Wildflower Design</h3>
+                    <p>Co-founder, Web & Branding | Ongoing</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Trimlight Raleigh</h3>
+                    <p>Facebook Ads, Lead Generation | 2024</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Canvas 35</h3>
+                    <p>Design Work | Ongoing</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>SQUEEGEX</h3>
+                    <p>Ads, Scheduling, Sales Strategy | 2024</p>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <p>More coming soon!</p>
+        </section>
+    </div>
+    <div class="footer">
+        <p>Contact: your.email@example.com</p>
     </div>
 </body>
 </html>
