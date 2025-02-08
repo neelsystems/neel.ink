@@ -4,200 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>neel.ink</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=VT323&display=swap');
-        
+        /* General Styling */
         body {
-            background-color: #ffefd5;
-            font-family: 'Roboto', sans-serif;
-            color: #333;
+            background-color: #0d1117;
+            font-family: 'Press Start 2P', cursive;
+            color: #c9d1d9;
             margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            box-sizing: border-box;
-            flex-direction: column;
-        }
-        header {
-            width: 100%;
-            background-color: #ff6347;
-            color: #fff;
-            padding: 20px 0;
+            padding: 20px;
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            top: 0;
-            z-index: 1000;
-            font-family: 'VT323', monospace;
         }
-        header h1 {
-            margin: 0;
-            font-size: 36px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-        .container {
-            background-color: #fff;
-            padding: 40px 20px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            border-radius: 8px;
-            max-width: 800px;
-            width: 90%;
-            box-sizing: border-box;
-            margin: 100px 20px 20px 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .container:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        }
-        .pixel-art {
-            width: 120px;
-            height: 120px;
-            background-image: url('https://via.placeholder.com/120'); /* Replace with your pixel art image URL */
-            margin: 0 auto 20px auto;
-            border-radius: 50%;
-            border: 4px solid #ff6347;
-            animation: spin 5s linear infinite;
-        }
-        @keyframes spin {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-        h2 {
-            font-size: 26px;
-            margin: 20px 0;
-            color: #ff6347;
-        }
-        p {
-            font-size: 16px;
-            margin: 10px 0;
-            text-align: left;
-            line-height: 1.6;
-        }
-        ul {
-            text-align: left;
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        .button {
-            background-color: #ff6347;
-            color: #fff;
-            padding: 12px 24px;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 20px;
-            border-radius: 4px;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-            font-family: 'VT323', monospace;
-        }
-        .button:hover {
-            background-color: #ff4500;
-        }
-        footer {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #666;
-            font-family: 'VT323', monospace;
-        }
-        @media (max-width: 600px) {
-            h2 {
-                font-size: 22px;
-            }
-            p {
-                font-size: 14px;
-            }
-            .button {
-                font-size: 14px;
-            }
-        }
-        .experience {
+
+        h1 {
+            color: #58a6ff;
+            font-size: 1.5rem;
             margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 90%;
+            margin: auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: rgba(20, 20, 20, 0.9);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #30363d;
+        }
+
+        th {
+            background: #161b22;
+            color: #58a6ff;
+        }
+
+        tr:hover {
+            background: rgba(88, 166, 255, 0.2);
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            table {
+                font-size: 12px;
+            }
+            th, td {
+                padding: 8px;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>neel.ink</h1>
-    </header>
     <div class="container">
-        <div class="pixel-art"></div>
-        <h2>About Me</h2>
-        <p>
-            Hello! I'm Austin Neel, a web developer with a passion for creating unique and engaging digital experiences. With a background in systems design, marketing, and client success, I bring a diverse skill set to every project. My journey in the tech world has been fueled by a love for innovation and a drive to push the boundaries of what's possible online.
-        </p>
-        <h2>My Expertise</h2>
-        <p>
-            Over the years, I've honed my skills in various areas:
-        </p>
-        <ul>
-            <li>Web Development: Crafting responsive and visually appealing websites.</li>
-            <li>Systems Design: Enhancing efficiency and scalability through innovative designs.</li>
-            <li>Marketing: Developing strategies that drive engagement and growth.</li>
-            <li>Client Relations: Building strong relationships and ensuring client satisfaction.</li>
-        </ul>
-        <h2>Projects</h2>
-        <p>Here are a few highlights from my portfolio:</p>
-        <ul>
-            <li><strong>Squeegee Bros:</strong> Enhanced scheduling and client relations for a window cleaning business.</li>
-            <li><strong>Uncle Kim's Coatings:</strong> Developed a dynamic website for a concrete company.</li>
-            <li><strong>IB Printing:</strong> Created an engaging online presence for a printing service.</li>
-            <li><strong>Deb's Cookie Jar:</strong> Designed a delightful website for a local bakery.</li>
-        </ul>
-        <h2>Experience</h2>
-        <div class="experience">
-            <p>
-                <strong>Senior Systems Design Engineer at Squeegee Bros (Oct 2023 - Present):</strong> Responsible for system designs that enhance efficiency and scalability. Key contributions include innovating system designs, leading IT integration, conducting system testing, and mentoring junior engineers.
-            </p>
-        </div>
-        <div class="experience">
-            <p>
-                <strong>Vice President Of Marketing And Client Success at Concrete Coating Acquisitions (Feb 2024 - Apr 2024):</strong> Focused on client satisfaction and marketing strategies in the concrete coatings industry.
-            </p>
-        </div>
-        <div class="experience">
-            <p>
-                <strong>Web Developer (Feb 2019 - Mar 2024):</strong> Freelance experience in web development, helping individuals and businesses with digital solutions.
-            </p>
-        </div>
-        <div class="experience">
-            <p>
-                <strong>Door to Door Salesperson at Moxie Pest Control (Mar 2023 - Aug 2023):</strong> Developed persuasive skills, built customer relationships, and achieved sales targets.
-            </p>
-        </div>
-        <div class="experience">
-            <p>
-                <strong>Frontend Developer at Crypto.com (Feb 2021 - Dec 2022):</strong> Contributed to Web3 development, particularly in NFT projects.
-            </p>
-        </div>
-        <div class="experience">
-            <p>
-                <strong>Barista at Farmhouse Corner Market (Jul 2019 - Apr 2020):</strong> Gained experience in customer service and teamwork.
-            </p>
-        </div>
-        <div class="experience">
-            <p>
-                <strong>Equestrian Trainer Assistant at Ferdinand's Horse Rescue and Boarding Facility (Feb 2018 - Jan 2020):</strong> Provided daily care for horses and assisted with training activities.
-            </p>
-        </div>
-        <h2>Let's Connect</h2>
-        <p>
-            I'm always excited to collaborate on new projects and bring innovative ideas to life. Feel free to check out my work on GitHub or get in touch with me for any inquiries or opportunities.
-        </p>
-        <a href="https://github.com/neelsystems" class="button">Visit My GitHub</a>
+        <h1>Experience & Projects</h1>
+        <table>
+            <tr>
+                <th>Project</th>
+                <th>Role</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>Trimlight Raleigh</td>
+                <td>Advertising & Sales</td>
+                <td>Managed high-ticket Facebook ad campaigns.</td>
+            </tr>
+            <tr>
+                <td>Anova</td>
+                <td>Marketing & Strategy</td>
+                <td>Developed and executed digital marketing strategies.</td>
+            </tr>
+            <tr>
+                <td>Egolf Interiors</td>
+                <td>Branding & Web Design</td>
+                <td>Created branding assets and a modern website.</td>
+            </tr>
+            <tr>
+                <td>Canvas 35</td>
+                <td>Creative Director</td>
+                <td>Led creative initiatives and digital experiences.</td>
+            </tr>
+        </table>
     </div>
-    <footer>
-        © 2024 Austin Neel. All rights reserved.
-    </footer>
 </body>
 </html>
