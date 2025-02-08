@@ -3,218 +3,233 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
-    color: #343a40;
-    line-height: 1.5;
+    background-color: #f8f9fa; /* Light gray background */
+    color: #343a40;          /* Dark gray text */
+    line-height: 1.6;
 }
 
 .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    padding: 20px;
+    width: 80%;               /* Adjust width as needed */
+    margin: auto;            /* Center the container */
+    overflow: hidden;        /* Prevent content overflow */
+    padding: 20px;           /* Add some padding */
 }
 
 /* Header Styles */
 header {
-    background: #343a40;
-    color: white;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
-    text-align: center;
+    background: #343a40;      /* Dark gray background */
+    color: white;             /* White text */
+    padding-top: 1.5em;       /* Top padding */
+    padding-bottom: 1.5em;    /* Bottom padding */
+    text-align: center;       /* Center text */
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5em;
+    margin: 0;               /* Remove default margin */
+    font-size: 2.5em;         /* Larger font size */
 }
 
 header .tagline {
-    font-style: italic;
-    color: #adb5bd;
+    font-style: italic;       /* Italic text */
+    color: #adb5bd;          /* Light gray color */
 }
 
 header .quote {
-    font-size: 1.2em;
-    margin-top: 1em;
-    font-style: normal;
+    font-size: 1.2em;         /* Adjust as needed */
+    margin-top: 1em;          /* Space from tagline */
+    font-style: normal;       /* Remove default style */
 }
 
 /* Navigation Styles */
 nav {
-    background: #e9ecef;
-    color: #343a40;
+    background: #e9ecef;      /* Light gray background */
+    color: #343a40;          /* Dark gray text */
 }
 
 nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
+    margin: 0;               /* Remove default margin */
+    padding: 0;              /* Remove default padding */
+    list-style: none;       /* Remove bullets */
+    display: flex;           /* Use flexbox */
+    justify-content: space-around; /* Space items evenly */
 }
 
 nav a {
-    color: #343a40;
-    display: block;
-    padding: 0.75em;
-    text-decoration: none;
-    transition: background-color 0.3s;
+    color: #343a40;          /* Dark gray text */
+    display: block;           /* Make the entire area clickable */
+    padding: 0.75em;          /* Add padding */
+    text-decoration: none;   /* Remove underlines */
+    transition: background-color 0.3s; /* Smooth transition */
 }
 
 nav a:hover {
-    background-color: #dee2e6;
+    background-color: #dee2e6; /* Lighter gray on hover */
 }
 
 /* Main Content Styles */
 main {
-    padding: 2em 0;
+    padding: 2em 0;          /* Top and bottom padding */
 }
 
 section {
-    margin-bottom: 2em;
-    background: white;
-    padding: 1.5em;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;       /* Space between sections */
+    background: white;         /* White background */
+    padding: 1.5em;          /* Padding inside section */
+    border-radius: 8px;       /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 section h2 {
-    color: #343a40;
-    border-bottom: 2px solid #343a40;
-    padding-bottom: 0.5em;
-    margin-bottom: 1em;
+    color: #343a40;          /* Dark gray text */
+    border-bottom: 2px solid #343a40; /* Underline */
+    padding-bottom: 0.5em;    /* Space below line */
+    margin-bottom: 1em;       /* Space below heading */
 }
 
 /* Skills Styles */
 .skill-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px;               /* Space between items */
 }
 
 .skill-item {
-    background: #f1f3f5;
-    padding: 1.25em;
-    border-radius: 6px;
-    text-align: center;
-    transition: transform 0.3s;
+    background: #f1f3f5;      /* Light gray background */
+    padding: 1.25em;          /* Padding inside item */
+    border-radius: 6px;       /* Rounded corners */
+    text-align: center;       /* Center content */
+    transition: transform 0.3s; /* Smooth transition */
 }
 
 .skill-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Slight lift on hover */
 }
 
 .skill-item i {
-    font-size: 2em;
-    color: #007bff;
-    margin-bottom: 0.5em;
+    font-size: 2em;           /* Larger icon size */
+    color: #007bff;          /* Blue color */
+    margin-bottom: 0.5em;    /* Space below icon */
 }
 
 /* Experience Table Styles */
 .experience-table {
-    display: flex;
-    flex-direction: column;
+    display: flex;           /* Use flexbox */
+    flex-direction: column;  /* Stack items vertically */
 }
 
 .experience-row {
-    display: flex;
-    margin-bottom: 1.5em;
-    border-bottom: 1px solid #e9ecef;
-    padding-bottom: 1.5em;
+    display: flex;           /* Use flexbox */
+    margin-bottom: 1.5em;       /* Space between rows */
+    border-bottom: 1px solid #e9ecef; /* Separator line */
+    padding-bottom: 1.5em;    /* Space below line */
 }
 
 .experience-column {
-    flex: 1;
-    padding: 0 15px;
+    flex: 1;                 /* Take up equal space */
+    padding: 0 15px;          /* Add side padding */
 }
 
 .experience-column h3 {
-    color: #343a40;
-    margin-bottom: 0.5em;
+    color: #343a40;          /* Dark gray text */
+    margin-bottom: 0.5em;    /* Space below heading */
 }
 
 .experience-column .company {
-    font-style: italic;
-    color: #6c757d;
-    margin-bottom: 0.25em;
+    font-style: italic;       /* Italic text */
+    color: #6c757d;          /* Medium gray color */
+    margin-bottom: 0.25em;    /* Space below company */
 }
 
 .experience-column .date {
-    color: #6c757d;
-    font-size: 0.9em;
+    color: #6c757d;          /* Medium gray color */
+    font-size: 0.9em;         /* Smaller font size */
 }
 
 /* Project Grid Styles */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 20px;               /* Space between items */
 }
 
 .project-item {
-    background: #f1f3f5;
-    padding: 1.25em;
-    border-radius: 6px;
-    transition: transform 0.3s;
+    background: #f1f3f5;      /* Light gray background */
+    padding: 1.25em;          /* Padding inside item */
+    border-radius: 6px;       /* Rounded corners */
+    transition: transform 0.3s; /* Smooth transition */
 }
 
 .project-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Slight lift on hover */
 }
 
 .project-item h3 {
-    margin-top: 0;
-    margin-bottom: 0.5em;
+    margin-top: 0;           /* Remove default margin */
+    margin-bottom: 0.5em;    /* Space below heading */
 }
 
 .project-item a {
-    color: #007bff;
-    text-decoration: none;
+    color: #007bff;          /* Blue color */
+    text-decoration: none;   /* Remove underlines */
 }
 
 .project-item a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Underline on hover */
 }
 
 /* Contact Styles */
 #contact p {
-    margin-bottom: 1em;
+    margin-bottom: 1em;       /* Space between paragraphs */
 }
 
 #contact a {
-    color: #007bff;
-    text-decoration: none;
+    color: #007bff;          /* Blue color */
+    text-decoration: none;   /* Remove underlines */
 }
 
 #contact a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Underline on hover */
 }
 
 /* Footer Styles */
 footer {
-    background: #343a40;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
+    background: #343a40;      /* Dark gray background */
+    color: white;             /* White text */
+    text-align: center;       /* Center text */
+    padding: 1em 0;          /* Top and bottom padding */
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .container {
-        width: 95%;
+        width: 95%;           /* Wider on smaller screens */
     }
 
     nav ul {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;    /* Center text */
     }
 
     nav li {
-        margin-bottom: 0.5em;
+        margin-bottom: 0.5em;  /* Space between items */
     }
 
     .experience-row {
-        flex-direction: column;
+        flex-direction: column; /* Stack experience columns vertically */
     }
+}
+
+/* Ensure styles are applied with higher specificity */
+body, header, nav, main, section, .container, .skill-grid, .skill-item, .experience-table, .experience-row, .experience-column, .project-grid, .project-item, footer {
+    all: initial;
+    display: block;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #343a40;
+    line-height: 1.6;
 }
